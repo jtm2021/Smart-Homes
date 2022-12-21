@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Homes</title>
     <link rel="stylesheet" href="../build/css/style.css">
-
+    <script src="./js/main.js" defer></script>
+</head>
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header class="bg-teal-700 text-white sticky top-0 z-10">
         <section class="max-w-7xl mx-auto p-4 flex justify-between items-center">
@@ -14,15 +15,29 @@
                 <a href="#hero">🏠 Smart Homes</a>
             </h1>
             <div>
-                <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
-                    &#9776;
+                <button id="mobile-nav-button" class="text-3xl md:hidden cursor-pointer hover:opacity-50 relative w-8 h-8">
+                    <!-- &#9776; -->
+                    <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5">
+
+                    </div>
                 </button>
-                <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
-                    <a href="#hero" class="hover:opacity-90">Home</a>
-                    <a href="#faqs" class="hover:opacity-90">FAQs</a>
-                    <a href="#contact" class="hover:opacity-90">Contact</a>
+                <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
+                    <a href="#hero" class="hover:opacity-50">Home</a>
+                    <a href="#faqs" class="hover:opacity-50">FAQs</a>
+                    <a href="#contact" class="hover:opacity-50">Contact</a>
                 </nav>
             </div>
+        </section>
+        <section id="mobile-menu" class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <button class="text-8xl self-end px-6 hover:opacity-50">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#hero" class="w-full text-center py-6 hover:opacity-50">Home</a>
+                <a href="#faqs" class="w-full text-center py-6 hover:opacity-50">FAQs</a>
+                <a href="#contact" class="w-full text-center py-6 hover:opacity-50">Contact</a>
+                <a href="#footer" class="w-full text-center py-6 hover:opacity-50">Legal</a>
+            </nav>
         </section>
     </header>
     <main class="max-w-6xl mx-auto">
@@ -43,7 +58,7 @@
 
         <hr class="mx-auto bg-black dark:bg-white">
 
-        <section id="homes" class="p-32 my-12">
+        <section id="homes" class="p-16 my-12">
             <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
                 Choose the Best!
             </h2>
